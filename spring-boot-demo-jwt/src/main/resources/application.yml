@@ -1,0 +1,6 @@
+server:
+  port: 8080
+jwt:
+  config:
+    key: tensquare
+    ttl: 60000  #过期时间一分钟
