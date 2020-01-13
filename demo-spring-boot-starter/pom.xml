@@ -14,6 +14,13 @@
     <modules>
         <module>demo-spring-boot-starter-autoconfigure</module>
     </modules>
+    <dependencies>
+        <dependency>
+            <groupId>org.zxl</groupId>
+            <artifactId>demo-spring-boot-starter-autoconfigure</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 
 
 </project>
