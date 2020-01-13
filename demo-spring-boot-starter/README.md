@@ -1,0 +1,7 @@
+一个完整的Spring Boot Starter可能包含以下组件：
+
+autoconfigure模块：包含自动配置的代码
+starter模块：提供对autoconfigure模块的依赖，以及一些其它的依赖
+（PS：如果你不需要区分这两个概念的话，也可以将自动配置代码模块与依赖管理模块合并成一个模块）
+
+简而言之，starter应该提供使用该库所需的一切
