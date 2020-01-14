@@ -1,0 +1,16 @@
+{
+  "name": "接口说明文档",
+  "version": "版本号",
+  "description": "项目描述",
+  "title": "浏览器标题",
+  "url": "测试地址",
+
+  "header": {
+    "title": "标题",
+    "filename": "内容文件"
+  },
+  "footer": {
+    "title": "",
+    "filename": ""
+  }
+}
