@@ -1,0 +1,16 @@
+This is an example output for a service running at http://localhost:8080:
+
+方法 Test1:
+.request
+include::{snippets}/test1/http-request.adoc[]
+
+.response
+include::{snippets}/test1/http-response.adoc[]
+
+
+方法 Test2:
+.request
+include::{snippets}/test2/http-request.adoc[]
+
+.response
+include::{snippets}/test2/http-response.adoc[]

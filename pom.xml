@@ -22,6 +22,7 @@
         <module>spring-boot-demo-jsp</module>
         <module>demo-spring-boot-starter</module>
         <module>demo-spring-boot-starter-test</module>
+        <module>spring-boot-demo-restdoc</module>
     </modules>
     <properties>
         <spring.boot.version>2.1.3.RELEASE</spring.boot.version>

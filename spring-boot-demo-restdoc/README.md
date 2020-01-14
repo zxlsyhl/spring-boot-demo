@@ -1,0 +1,1 @@
+使用spring-restdocs-mockmvc结合spring-boot-starter-test实现，在测试完成后生成接口文档html文件。
