@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.zxl.springbootdemo.shardsphere.jdbctest1.repository.UserLogRepository">
+
+    <insert id="addUserLog">
+        INSERT INTO user_log (
+          log_id, log_name, user_id, log_desc
+        )
+        VALUES (
+        #{logId,jdbcType=INTEGER},
+        #{logName,jdbcType=VARCHAR},
+        #{userId,jdbcType=INTEGER},
+        #{logDesc,jdbcType=VARCHAR}
+        )
+    </insert>
+   
+    <select id="userLoglist" resultType="org.zxl.springbootdemo.shardsphere.jdbctest1.entity.UserLog">
+        SELECT u.* FROM user_log u
+    </select>
+    
+    <resultMap id="UserInfoDetail" type="org.zxl.springbootdemo.shardsphere.jdbctest1.entity.UserInfoDetail">
+        <result column="user_id" property="userId" jdbcType="INTEGER"/>
+        <result column="user_name" property="userName" jdbcType="VARCHAR"/>
+        <result column="user_work" property="userWork" jdbcType="VARCHAR"/>
+        <result column="user_tel" property="userTel" jdbcType="VARCHAR"/>
+        <!-- collection 标签需放在最后 -->
+        <collection property="userLogs" resultMap="LogItemsMap"/>
+    </resultMap>
+
+    <resultMap id="LogItemsMap" type="org.zxl.springbootdemo.shardsphere.jdbctest1.entity.UserLog">
+        <result column="log_id" property="logId" jdbcType="INTEGER"/>
+        <result column="log_name" property="logName" jdbcType="VARCHAR"/>
+        <result column="log_desc" property="logDesc" jdbcType="VARCHAR"/>
+    </resultMap>
+
+    <select id="userInfoDetail" resultMap="UserInfoDetail">
+--         SELECT t1.*,t2.log_id,t2.log_name,t2.log_desc from t_user_0 t1 left JOIN user_log t2
+--         on t1.user_id = t2.user_id
+
+        SELECT t1.*,t2.log_id,t2.log_name,t2.log_desc from t_user_0 t1 inner JOIN user_log t2
+        on t1.user_id = t2.user_id
+    </select>
+
+</mapper>

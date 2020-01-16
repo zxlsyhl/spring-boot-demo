@@ -1,0 +1,1 @@
+spring cache结合redis使用，查询时缓存中数据先从redis取值，没有则查数据库并放入缓存中。

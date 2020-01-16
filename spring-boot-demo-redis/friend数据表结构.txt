@@ -1,0 +1,9 @@
+CREATE TABLE `t_friend` (
+  `fr_id` int(10) NOT NULL,
+  `name` varchar(20) NOT NULL,
+  `nickname` varchar(20) NOT NULL,
+  `age` int(5) NOT NULL DEFAULT '0',
+  `description` varchar(50) NOT NULL,
+  PRIMARY KEY (`fr_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
