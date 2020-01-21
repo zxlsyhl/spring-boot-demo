@@ -1,0 +1,5 @@
+server:
+  port: 8132
+security:
+  basic:
+    enabled: false
