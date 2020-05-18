@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: dubbo-provider
+dubbo:
+  scan:
+    base-packages: org.zxl.springbootdemo.dubbo.provider.service
+  protocol:
+    name: dubbo
+    port: -1
+  registry:
+    address: zookeeper://192.168.1.109:2181?backup=192.168.1.109:2182,192.168.1.109:2183
+    timeout: 10000
+demo:
+  service:
+    version: 1.0.0
