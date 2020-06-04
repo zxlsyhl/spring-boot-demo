@@ -9,6 +9,8 @@ import java.util.List;
 public class IndexController {
     @GetMapping("/toIndex")
     public String toIndex(){
+        System.out.println("to index 12312");
+        System.out.println("to index ******");
         return "index";
     }
 
