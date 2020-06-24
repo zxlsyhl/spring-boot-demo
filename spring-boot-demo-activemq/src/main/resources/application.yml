@@ -1,0 +1,7 @@
+spring:
+  activemq:
+    user: admin
+    password: admin
+    pool:
+      enabled: false
+    broker-url: tcp://localhost:61616
